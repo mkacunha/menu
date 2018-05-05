@@ -12,3 +12,7 @@
 
 Installing dependencies node-sass `npm install`  
 Compile files of SASS folder for CSS folder `npm run sass`  
+
+# Demo
+
+[Click Here](https://mkacunha.github.io/menu/)

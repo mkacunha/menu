@@ -1,0 +1,170 @@
+/* MOBILE FIRST */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/* SPECIFIC */
+/* ONLY Extra Small devices (767px and down) */
+/* ONLY Small devices (between 768px and 991) */
+/* ONLY Medium devices (between 992 and 1199) */
+/* ONLY Medium devices (1200 and up) */
+a {
+  cursor: pointer; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: 'Lato', Calibri, Arial; }
+
+.divider {
+  border-bottom: 2px solid #152D50; }
+
+.layout {
+  display: flex;
+  height: 100%; }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 0;
+  height: 100%;
+  background: #1F3A60;
+  color: #FFF;
+  overflow: hidden;
+  transition: width .25s ease;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .menu_show {
+    width: 400px;
+    overflow: visible; }
+  @media (min-width: 992px) {
+    .menu {
+      position: static;
+      width: 400px;
+      overflow: visible; }
+      .menu_hide {
+        width: 0;
+        overflow: hidden; } }
+  .menu__btn-show {
+    display: block; }
+    @media (min-width: 992px) {
+      .menu__btn-show {
+        display: none; } }
+  .menu__btn-hide {
+    display: none; }
+    @media (min-width: 992px) {
+      .menu__btn-hide {
+        display: block; } }
+  .menu__override {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.2; }
+    .menu__override_show {
+      display: block; }
+    @media (min-width: 992px) {
+      .menu__override {
+        display: none; } }
+
+.menu-header {
+  height: 170px;
+  display: grid;
+  grid-auto-rows: 10px 1fr 10px;
+  padding: 20px; }
+  .menu-header__logo {
+    justify-self: center;
+    align-self: center;
+    width: 50px; }
+
+.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto; }
+  .menu-list__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .menu-list__options-label {
+      flex: 1;
+      margin-left: 10px; }
+  .menu-list__item {
+    display: block;
+    padding: 20px;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer; }
+    .menu-list__item:hover {
+      background: #152D50; }
+    .menu-list__item-sub {
+      padding-left: 50px; }
+  .menu-list__sub {
+    display: none; }
+    .menu-list__sub_show {
+      display: block; }
+
+.menu-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .menu-user__option {
+    position: relative;
+    cursor: pointer; }
+  .menu-user__override {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .menu-user__override_show {
+      display: block; }
+
+.menu-user-list {
+  display: none;
+  position: absolute;
+  min-width: 250px;
+  background: #FFF;
+  border: solid 1px #DEDEDE;
+  border-radius: 2px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+  .menu-user-list_show {
+    display: block; }
+  .menu-user-list__item {
+    text-decoration: none;
+    display: block;
+    color: #1F3A60;
+    padding: 15px 10px;
+    font-weight: 500;
+    border-bottom: solid 0.2px #DEDEDE; }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+.header {
+  width: 100%;
+  height: 70px;
+  border-bottom: solid 2px #1F3A60;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: #1F3A60; }
+
+.content {
+  width: 100%;
+  padding: 30px;
+  color: #1F3A60;
+  text-align: center; }

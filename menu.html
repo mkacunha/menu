@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu</title>
+
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+
+    <script src="./js/menu.js"></script>
+</head>
+
+<body>
+    <section class="layout">
+
+        <section id="menu-override" class="menu__override" onclick="menu.navToggleShow()"></section>
+
+        <nav id="menu" class="menu">
+            <header class="menu-header divider">
+                <div>
+                    <a class="menu__btn-show" onclick="menu.navToggleShow()">
+                        <span class="fas fa-bars fa-2x"></span>
+                    </a>
+                </div>
+                <img class="menu-header__logo" src="./images/logo.png" alt="Logo do Cofre Vortual">
+                <div class="menu-user">
+                    <span>Administrador</span>
+                    <div id="menu-user-override" class="menu-user__override" onclick="menu.menuUserToggle()"></div>
+                    <div class="fas fa-angle-down menu-user__option" onclick="menu.menuUserToggle()">
+                        <ul id="menu-user-list" class="menu-user-list">
+                            <li>
+                                <a class="menu-user-list__item">Meus dados</a>
+                            </li>
+                            <li>
+                                <a class="menu-user-list__item">Alterar senha</a>
+                            </li>
+                            <li>
+                                <a class="menu-user-list__item">Sair</a>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </header>
+
+            <ul class="menu-list">
+                <li id="menu-home">
+                    <a class="divider menu-list__item" onclick="menu.submenuToggle('menu-home')">
+                        <div class="menu-list__options">
+                            <span class="fas fa-home"></span>
+                            <span class="menu-list__options-label">Home</span>
+                            <span class="fas fa-angle-down menu-list__options-arrow"></span>
+                        </div>
+                    </a>
+                    <ul class="menu-list menu-list__sub">
+                        <li>
+                            <a class="divider menu-list__item menu-list__item-sub">Opção 10</a>
+                        </li>
+                        <li>
+                            <a class="divider menu-list__item menu-list__item-sub">Opção 20</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="divider menu-list__item">Opção 1</a>
+                </li>
+                <li>
+                    <a class="divider menu-list__item">Opção 2</a>
+                </li>
+                <li>
+                    <a class="divider menu-list__item">Opção 3</a>
+                </li>
+                <li>
+                    <a class="divider menu-list__item">Opção 4</a>
+                </li>
+            </ul>
+        </nav>
+        </nav>
+
+        <section class="page">
+            <header class="header">
+                <a class="menu__btn-show" onclick="menu.navToggleShow()">
+                    <span class="fas fa-bars fa-2x"></span>
+                </a>
+                <a class="menu__btn-hide" onclick="menu.navToggleHide()">
+                    <span class="fas fa-bars fa-2x"></span>
+                </a>
+                <h1>TELA INICIAL</h1>
+                <div class="blank"></div>
+            </header>
+            <main class="content">
+                <h1>Hello World :)</h1>
+            </main>
+        </section>
+    </section>
+</body>
+
+</html>

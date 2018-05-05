@@ -1,0 +1,23 @@
+{
+  "name": "menu",
+  "version": "1.0.0",
+  "description": "Menu HTML5 + JAVASCRIPT + SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w sass -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkacunha/menu.git"
+  },
+  "author": "Maiko Cunha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkacunha/menu/issues"
+  },
+  "homepage": "https://github.com/mkacunha/menu#readme",
+  "dependencies": {
+    "node-sass": "^4.8.3"
+  }
+}

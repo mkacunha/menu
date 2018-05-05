@@ -1,0 +1,160 @@
+@import ./mobileFirst
+
+$primary-color: #1F3A60
+$primary-color-dark: #152D50
+
+a 
+  cursor: pointer
+
+html, body
+  height: 100%
+
+body
+  font-family: 'Lato', Calibri, Arial
+
+.divider
+  border-bottom: 2px solid $primary-color-dark
+
+.layout
+  display: flex
+  height: 100%    
+
+.menu
+  display: flex
+  flex-direction: column
+  width: 0
+  height: 100%
+  background: $primary-color
+  color: #FFF
+  overflow: hidden
+  transition: width .25s ease
+  position: absolute
+  top: 0
+  left: 0
+  &_show
+    width: 400px
+    overflow: visible
+  +media-min-md()
+    position: static
+    width: 400px
+    overflow: visible
+    &_hide
+      width: 0
+      overflow: hidden
+  &__btn-show
+    display: block
+    +media-min-md()
+      display: none
+  &__btn-hide
+    display: none
+    +media-min-md()
+      display: block
+  &__override
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: black
+    opacity: 0.2
+    &_show
+      display: block
+    +media-min-md()
+      display: none  
+
+.menu-header
+  height: 170px
+  display: grid
+  grid-auto-rows: 10px 1fr 10px
+  padding: 20px
+  &__logo
+    justify-self: center
+    align-self: center
+    width: 50px
+
+.menu-list
+  list-style-type: none
+  margin: 0
+  padding: 0
+  overflow: auto
+  &__options
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    &-label
+      flex: 1
+      margin-left: 10px
+  &__item
+    display: block
+    padding: 20px
+    color: #FFF
+    text-decoration: none
+    cursor: pointer
+    &:hover
+      background: $primary-color-dark
+    &-sub
+      padding-left: 50px
+  &__sub
+    display: none
+    &_show
+      display: block
+
+.menu-user
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  &__option
+    position: relative
+    cursor: pointer
+  &__override
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &_show
+      display: block
+
+.menu-user-list
+  display: none
+  position: absolute
+  min-width: 250px
+  background: #FFF
+  border: solid 1px #DEDEDE
+  border-radius: 2px
+  padding: 0
+  margin: 0
+  list-style-type: none
+  &_show
+    display: block
+  &__item
+    text-decoration: none
+    display: block
+    color: $primary-color
+    padding: 15px 10px
+    font-weight: 500
+    border-bottom: solid 0.2px #DEDEDE
+
+.page
+  display: flex
+  flex-direction: column
+  width: 100%
+  
+.header
+  width: 100%
+  height: 70px
+  border-bottom: solid 2px $primary-color
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  padding: 0 10px
+  color: $primary-color
+
+.content
+  width: 100%
+  padding: 30px
+  color: $primary-color
+  text-align: center
